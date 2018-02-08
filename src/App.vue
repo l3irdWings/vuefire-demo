@@ -3,7 +3,6 @@
     <img src="./assets/logo.png">
     <span>+</span>
     <img src="./assets/vue-fire.png" width="200" height="200">
-    <span>VueFire</span>
     <router-view/>
   </div>
 </template>

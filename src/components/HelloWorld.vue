@@ -55,4 +55,8 @@ li {
 a {
   color: #42b983;
 }
+input {
+  width: 400px;
+  margin: 10px auto;
+}
 </style>
