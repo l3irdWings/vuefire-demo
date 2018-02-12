@@ -41,7 +41,7 @@ export default {
         message: this.newMessage
       })
       this.newMessage = ''
-    },
+    }
   }
 }
 </script>
