@@ -5,6 +5,9 @@
       <b-row>
         <b-col id="input_col">
           <div id="new_message_div">
+            <img src="./../assets/logo.png">
+            <span>+</span>
+            <img src="./../assets/vue-fire.png" width="200" height="200">
             <b-form-input id="new_message_input" type="text" v-model="newMessage" required placeholder="Write Comment"></b-form-input>
             <b-button id="new_message_button" v-on:click="addMessage()">Send</b-button>
           </div>
@@ -37,7 +40,8 @@ export default {
       this.$firebaseRefs.messages.push({
         message: this.newMessage
       })
-    }
+      this.newMessage = ''
+    },
   }
 }
 </script>
@@ -64,10 +68,11 @@ export default {
     top: 50%;
     left: 20px;
     right: 20px;
-    height: 110px;
-    margin-top: -55px;
+    height: 320px;
+    margin-top: -160px;
   }
   #new_message_input {
+    margin-top: 10px;
     height: 50px;
   }
   #new_message_button {
@@ -78,12 +83,12 @@ export default {
     position: relative;
     height: 500px;
   }
-  #mesages_div {
+  #messages_div {
     position: absolute;
     top: 50%;
     left: 20px;
     right: 20px;
-    min-height: 100px;
-    margin-top: -55px;
+    height: 320px;
+    margin-top: -160px;
   }
 </style>
