@@ -6,7 +6,6 @@
         <b-col id="input_col">
           <div id="new_message_div">
             <img src="./../assets/logo.png">
-            <span>+</span>
             <img src="./../assets/vue-fire.png" width="200" height="200">
             <b-form-input id="new_message_input" type="text" v-model="newMessage" required placeholder="Write Comment"></b-form-input>
             <b-button id="new_message_button" v-on:click="addMessage()">Send</b-button>
@@ -58,6 +57,7 @@ export default {
   span.badge {
     margin-right: 10px;
     margin-bottom: 10px;
+    padding: 10px 10px 0;
   }
   #input_col {
     position: relative;
