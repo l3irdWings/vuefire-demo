@@ -11,4 +11,5 @@ let config = {
 
 const app = initializeApp(config)
 
-export const db = app.database()
+export const database = app.database()
+export const storage = app.storage()
