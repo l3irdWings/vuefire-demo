@@ -1,6 +1,6 @@
 <template>
-  <div class="database">
-    <h1><b>Database</b></h1>
+  <div class="firestore">
+    <h1><b>Firestore</b></h1>
     <b-container>
       <b-row>
         <b-col id="left_col">
@@ -22,22 +22,22 @@
 </template>
 
 <script>
-import {database} from '../firebase'
+import {firestore} from '../firebase'
 
 export default {
-  name: 'database',
+  name: 'firestore',
   data () {
     return {
       newMessage: ''
     }
   },
-  firebase: {
-    messages: database.ref('message')
+  firestore: {
+    messages: firestore.collection('message')
   },
   methods: {
     addMessage () {
       if (this.newMessage !== '') {
-        this.$firebaseRefs.messages.push({
+        this.$firestore.messages.add({
           message: this.newMessage
         })
         this.newMessage = ''

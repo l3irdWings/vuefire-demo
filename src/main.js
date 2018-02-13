@@ -7,10 +7,12 @@ import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import VueFire from 'vuefire'
+import VueFirestore from 'vue-firestore'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(VueFire)
+Vue.use(VueFirestore)
 
 /* eslint-disable no-new */
 new Vue({

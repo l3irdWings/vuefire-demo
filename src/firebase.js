@@ -9,7 +9,10 @@ let config = {
   messagingSenderId: '967017213223'
 }
 
+require('firebase/firestore')
+
 const app = initializeApp(config)
 
 export const database = app.database()
 export const storage = app.storage()
+export const firestore = app.firestore()
