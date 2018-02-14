@@ -7,13 +7,10 @@
           <div id="left_inside_div">
             <img src="./../assets/logo.png">
             <img src="./../assets/vue-fire.png" width="200" height="200">
-            <b-form-file id="new_image_input" v-model="newImage" :state="Boolean(newImage)" accept=".jpg, .png" placeholder="Choose a file..."></b-form-file>
-            <b-button id="new_image_button" v-on:click="uploadImage()">Upload</b-button>
           </div>
         </b-col>
         <b-col id="right_col">
           <div id="right_inside_div">
-            <b-img v-for="image in images" v-bind:key="image['.key']" v-bind:src="image.url" fluid alt="image" height="100"></b-img>
           </div>
         </b-col>
       </b-row>
@@ -22,19 +19,8 @@
 </template>
 
 <script>
-import {database, storage} from '../firebase'
-
 export default {
   name: 'storage',
-  data () {
-    return {
-      newImage: null,
-      processedImages: []
-    }
-  },
-  firebase: {
-    images: database.ref('image')
-  },
   methods: {
     uploadImage () {
       let self = this
